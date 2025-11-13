@@ -1,5 +1,8 @@
 # HA-MeetingLight
 
+![banner](banner.png)
+
+
 A lightweight Windows system tray application that monitors webcam and microphone activity (e.g. during Teams/Zoom online meetings) and publishes status to Home Assistant via MQTT. 
 
 You can then use a Home Assistant [automation](ha-automation-example.yaml), to turn your favourite status light on or off.
