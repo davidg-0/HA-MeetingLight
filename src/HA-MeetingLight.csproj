@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icons/app.ico</ApplicationIcon>
+    <AssemblyName>HA-MeetingLight</AssemblyName>
+    <RootNamespace>HAMeetingLight</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ini-parser-netstandard" Version="2.*" />
+    <PackageReference Include="MQTTnet" Version="5.*" />    
+    <EmbeddedResource Include ="icons/app.ico" />
+    <EmbeddedResource Include ="icons/app-off.ico" />
+    <EmbeddedResource Include ="icons/app-mic.ico" />
+    <EmbeddedResource Include ="icons/app-cam.ico" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+alias: MeetingStatusLight
+description: "Changes light color based on webcam and microphone status"
+triggers:
+  - trigger: state
+    entity_id:
+      - binary_sensor.red_webcam
+      - binary_sensor.red_microphone
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: binary_sensor.red_webcam
+            state: "on"
+        sequence:
+          - action: light.turn_on
+            data:
+              rgb_color: [253, 0, 0]
+              brightness_pct: 20
+            target:
+              entity_id: light.meeting_status_light
+      - conditions:
+          - condition: state
+            entity_id: binary_sensor.red_microphone
+            state: "on"
+        sequence:
+          - action: light.turn_on
+            data:
+              rgb_color: [0, 190, 253]
+              brightness_pct: 35
+            target:
+              entity_id: light.meeting_status_light
+    default:
+      - action: light.turn_off
+        target:
+          entity_id: light.meeting_status_light
+mode: restart

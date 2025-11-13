@@ -1,0 +1,11 @@
+[MQTT]
+Server=homeassistant.local
+Port=1883
+Username=mqtt_user
+Password=mqtt_password
+
+[Monitoring]
+PollingIntervalSeconds=10
+
+[Logging]
+LogToFile=no
